@@ -4,10 +4,10 @@ ARCHIVE_BUILD_FOLDER="/tmp/portainer-builds"
 
 # parameter: "platform-architecture"
 function build_and_push_images() {
-  docker build -t "portainer/portainer:$1-${VERSION}" -f build/linux/Dockerfile .
-  docker tag  "portainer/portainer:$1-${VERSION}" "portainer/portainer:$1"
-  docker push "portainer/portainer:$1-${VERSION}"
-  docker push "portainer/portainer:$1"
+  docker build -t "maocorte/portainer:$1-${VERSION}" -f build/linux/Dockerfile .
+  docker tag  "maocorte/portainer:$1-${VERSION}" "maocorte/portainer:$1"
+  docker push "maocorte/portainer:$1-${VERSION}"
+  docker push "maocorte/portainer:$1"
 }
 
 # parameter: "platform-architecture"
